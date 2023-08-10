@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>O que o universo tem a dizer?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 50px;
+            margin: 0;
+            background-image: url("https://usagif.com/wp-content/uploads/gifs/starfall-gif-20.gif");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transition: background-image 0.5s ease;
+        }
+
+        h1 {
+            color: #7842cf;
+        }
+
+        #message {
+            font-size: 42px;
+            margin-bottom: 20px;
+            background-color: rgba(27, 110, 116, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.5s ease;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #7a4caf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3a2bc2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pressione o botão para descobrir o que o universo tem a revelar!</h1>
+    <div id="message">Clique e receba uma mensagem</div>
+    <button onclick="sortearMensagem()">Quero Saber</button>
+
+    <script>
+        var mensagens = [
+        "Acredite em si mesmo e todo o resto se encaixa. Acredite em você mesmo e as coisas acontecem.",
+            "A persistência é o caminho do êxito.",
+            "Seja grato pelo que você tem enquanto trabalha pelo que deseja.",
+            "Nunca é tarde demais para ser o que você poderia ter sido.",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+            "Não deixe o medo decidir o que acontece com você.",
+            "Acredite no seu potencial e trabalhe duro para transformá-lo em realidade.",
+            "Se você quer ser bem-sucedido, precisa ter dedicação total, buscar seu último limite e dar o melhor de si.",
+            "O que você faria se soubesse que não pode falhar?",
+            "Não importa o que você decidiu. O que importa é que isso te faça feliz.",
+            "A vida é 10% o que acontece comigo e 90% de como eu reajo a isso.",
+            "Tudo o que você sempre quis está do outro lado do medo.",
+            "Só é lutador quem sabe lutar consigo mesmo.",
+            "Acredite em você e tudo será possível.",
+            "Mantenha seus olhos nas estrelas e seus pés no chão.",
+            "Seja você mesmo, todos os outros já existem.",
+            "A jornada de mil milhas começa com um simples passo.",
+            "A única limitação é aquela que você cria em sua mente.",
+            "Tudo o que você precisa está dentro de você.",
+            "Acredite que você pode, assim você já está no meio do caminho.",
+            "Não tenha medo de desistir do bom para perseguir o ótimo.",
+            "Não é o que você olha que importa, é o que você vê.",
+            "Seu tempo é limitado, não o desperdice vivendo a vida de outra pessoa.",
+            "A vida é uma viagem e quem viaja vive duas vezes.",
+            "Você é do tamanho dos seus sonhos.",
+            "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
+            "Não existe um caminho para a felicidade. A felicidade é o caminho.",
+            "O pessimista vê dificuldade em cada oportunidade; o otimista vê oportunidade em cada dificuldade.",
+            "O otimismo é a fé em ação. Nada se pode levar a efeito sem otimismo.",
+            "Acredite em si mesmo e todo o resto se encaixa. Acredite em você mesmo e as coisas acontecem.",
+            "Se você quer ser bem-sucedido, precisa ter dedicação total, buscar seu último limite e dar o melhor de si.",
+            "Não importa o que você decidiu. O que importa é que isso te faça feliz.",
+            "A vida é 10% o que acontece comigo e 90% de como eu reajo a isso.",
+            "Tudo o que você sempre quis está do outro lado do medo.",
+            "Só é lutador quem sabe lutar consigo mesmo.",
+            "Acredite em você e tudo será possível.",
+            "Mantenha seus olhos nas estrelas e seus pés no chão.",
+            "Seja você mesmo, todos os outros já existem.",
+            "A jornada de mil milhas começa com um simples passo.",
+            "A única limitação é aquela que você cria em sua mente.",
+            "Tudo o que você precisa está dentro de você.",
+            "Acredite que você pode, assim você já está no meio do caminho.",
+            "Não tenha medo de desistir do bom para perseguir o ótimo.",
+            "Não é o que você olha que importa, é o que você vê.",
+            "Seu tempo é limitado, não o desperdice vivendo a vida de outra pessoa.",
+            "A vida é uma viagem e quem viaja vive duas vezes.",
+            "Você é do tamanho dos seus sonhos.",
+            "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",
+            "Não existe um caminho para a felicidade. A felicidade é o caminho.",
+            "O pessimista vê dificuldade em cada oportunidade; o otimista vê oportunidade em cada dificuldade.",
+            "O otimismo é a fé em ação. Nada se pode levar a efeito sem otimismo.",
+            "Acredite em si mesmo e todo o resto se encaixa. Acredite em você mesmo e as coisas acontecem.",
+            "Se você quer ser bem-sucedido, precisa ter dedicação total, buscar seu último limite e dar o melhor de si.",
+            "Não importa o que você decidiu. O que importa é que isso te faça feliz.",
+            "A vida é 10% o que acontece comigo e 90% de como eu reajo a isso.",
+            "Tudo o que você sempre quis está do outro lado do medo.",
+            "Só é lutador quem sabe lutar consigo mesmo.",
+            "Acredite em você e tudo será possível.",
+            "Mantenha seus olhos nas estrelas e seus pés no chão.",
+            "Seja você mesmo, todos os outros já existem.",
+            "A jornada de mil milhas começa com um simples passo.",
+            "A única limitação é aquela que você cria em sua mente.",
+            "Tudo o que você precisa está dentro de você.",
+            "Acredite que você pode, assim você já está no meio do caminho.",
+            "Não tenha medo de desistir do bom para perseguir o ótimo.",
+            "Não é o que você olha que importa, é o que você vê.",
+            "Seu tempo é limitado, não o desperdice vivendo a vida de outra pessoa.",
+            "A vida é uma viagem e quem viaja vive duas vezes.",
+            "Você é do tamanho dos seus sonhos."
+        ];
+
+        function sortearMensagem() {
+            var index = Math.floor(Math.random() * mensagens.length);
+            document.getElementById("message").style.opacity = 0;
+            setTimeout(function () {
+                document.getElementById("message").innerHTML = mensagens[index];
+                document.getElementById("message").style.opacity = 1;
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>
