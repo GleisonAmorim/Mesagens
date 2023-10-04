@@ -25,6 +25,29 @@ Fique à vontade para contribuir e compartilhar com seus amigos para espalhar ma
 
 Acesse: https://mesagens.vercel.app/
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+projectmessage
+Title: 🚀 Project "Messages from the Universe" 🌌💫
+
+Description:
+
+This is the repository of the "Messages from the Universe" project, an interactive website that aims to bring inspiration and motivation through positive and reflective messages.
+
+🌟 Key Features:
+
+More than 100 carefully selected motivational messages. Random draw of messages when clicking the "I want to know" button. Smooth transition to make the experience more enchanting. Modern and elegant interface with dark color palette for focus. Background with images of horizons, universes and stars, bringing peace and inspiration. Technologies used:
+
+HTML CSS JavaScript Access the website at: Link to the website 🔗
+
+Feel free to contribute and share with your friends to spread more positivity across the universe! 🌌💙
+
+#Motivation #Inspiration #WebDevelopment #JavaScript #HTML #CSS #Personal Project #Universe #Stars #Focus #Success
+
+Visit: https://mesagens.vercel.app/
+
+Project Image
+
 Imagem do Projeto
 
 ![Captura de tela 2023-08-05 103229](https://github.com/GleisonAmorim/Mensagens-MotivacionaisHTML/assets/54336609/c610f1ef-3195-4771-9c7e-6ab25061459e)
